@@ -2,7 +2,9 @@
 
 A small offline audit for one expensive ETL mistake: joining tables at different grains and then adding up repeated values.
 
-**Development checkpoint, not a finished release.** The audit core, strict input contracts, local evidence ledger, recovery CLI and offline examples work. A pinned real-data study now reproduces 26 populations and 52 SQL/audit plan comparisons. The evidence report is generated and checked locally at phone and desktop widths. Hosted CI has not run yet; publication and release checks remain.
+The audit engine, strict input contracts, local evidence ledger, recovery CLI and offline examples are available. A pinned real-data study reproduces 26 populations and 52 SQL/audit plan comparisons. Hosted validation passes on Python 3.10 and 3.12. The deployed evidence report has been checked at phone and desktop widths.
+
+[Read the live evidence report](https://zaaby.github.io/join-proof-lab/report/index.html) · [Browse validation runs](https://github.com/ZAABY/join-proof-lab/actions)
 
 ## A total can look right and still be wrong
 
@@ -64,7 +66,7 @@ uv run ruff check src tests
 uv run ruff format --check src tests
 ```
 
-The workflow targets Python 3.10 and 3.12 with synthetic/offline tests only, no Olist download. Both versions pass locally. A configured workflow is not evidence of a hosted pass.
+The workflow targets Python 3.10 and 3.12 with synthetic/offline tests only, no Olist download. Both versions pass locally and in the hosted workflow. Each validation run belongs to its reported commit, not every future revision.
 
 The current suite includes 600 seeded cases comparing the factorized result to independently executed DuckDB queries. Cases include empty inputs, duplicate and composite keys, SQL NULL keys, mixed left/inner joins and signed values. A finite test suite is not a proof for every possible input.
 
