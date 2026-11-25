@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "preserve_root_rows": true,
+  "relations": [
+    {
+      "name": "orders",
+      "path": "orders.csv",
+      "key": [
+        "order_id"
+      ],
+      "grain": [
+        "order_id"
+      ],
+      "join": "root",
+      "key_unique": true,
+      "measures": [
+        {
+          "name": "amount",
+          "column": "amount",
+          "scale": 2,
+          "conserve": true
+        }
+      ]
+    },
+    {
+      "name": "events",
+      "path": "events.csv",
+      "key": [
+        "order_id"
+      ],
+      "grain": [
+        "order_id"
+      ],
+      "join": "left",
+      "key_unique": true,
+      "measures": []
+    }
+  ]
+}

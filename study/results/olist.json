@@ -1,0 +1,1236 @@
+{
+  "schema_version": 1,
+  "license": "CC-BY-NC-SA-4.0",
+  "dataset_commit": "d9e49802f3e92d09ee94ab9ccc5e457f207a8959",
+  "duckdb_version": "1.4.2",
+  "cohort_definition": "Order purchase month; child rows restricted to that order population, never child event month",
+  "orphan_rows_excluded_from_cohorts": {
+    "items": 0,
+    "payments": 0,
+    "reviews": 0
+  },
+  "cohorts": [
+    {
+      "cohort": "all",
+      "source_rows": {
+        "orders": 99441,
+        "items": 112650,
+        "payments": 103886,
+        "reviews": 99224
+      },
+      "naive_gate_passed": false,
+      "preaggregated_gate_passed": true,
+      "naive_sql": {
+        "output_rows": 119143,
+        "items_units": 1427369965,
+        "payments_units": 2057966401,
+        "distinct_payments_units": 777358514
+      },
+      "preaggregated_sql": {
+        "output_rows": 99441,
+        "items_units": 1359164370,
+        "payments_units": 1600887212,
+        "distinct_payments_units": 778064869
+      },
+      "measures": [
+        {
+          "relation": "items",
+          "measure": "price",
+          "source_units": 1359164370,
+          "output_units": 1427369965,
+          "delta_units": 68205595,
+          "absolute_exposure_units": 68205595,
+          "affected_nonnull_rows": 3924
+        },
+        {
+          "relation": "payments",
+          "measure": "payment_value",
+          "source_units": 1600887212,
+          "output_units": 2057966401,
+          "delta_units": 457079189,
+          "absolute_exposure_units": 457079189,
+          "affected_nonnull_rows": 10748
+        }
+      ],
+      "naive_row_count_check_passed": false,
+      "naive_payment_total_check_passed": false,
+      "sum_distinct_payment_correct": false,
+      "sql_factorization_equal": true
+    },
+    {
+      "cohort": "2016-09",
+      "source_rows": {
+        "orders": 4,
+        "items": 6,
+        "payments": 3,
+        "reviews": 4
+      },
+      "naive_gate_passed": false,
+      "preaggregated_gate_passed": true,
+      "naive_sql": {
+        "output_rows": 7,
+        "items_units": 26736,
+        "payments_units": 38847,
+        "distinct_payments_units": 25224
+      },
+      "preaggregated_sql": {
+        "output_rows": 4,
+        "items_units": 26736,
+        "payments_units": 25224,
+        "distinct_payments_units": 25224
+      },
+      "measures": [
+        {
+          "relation": "items",
+          "measure": "price",
+          "source_units": 26736,
+          "output_units": 26736,
+          "delta_units": 0,
+          "absolute_exposure_units": 0,
+          "affected_nonnull_rows": 0
+        },
+        {
+          "relation": "payments",
+          "measure": "payment_value",
+          "source_units": 25224,
+          "output_units": 38847,
+          "delta_units": 13623,
+          "absolute_exposure_units": 13623,
+          "affected_nonnull_rows": 1
+        }
+      ],
+      "naive_row_count_check_passed": false,
+      "naive_payment_total_check_passed": false,
+      "sum_distinct_payment_correct": true,
+      "sql_factorization_equal": true
+    },
+    {
+      "cohort": "2016-10",
+      "source_rows": {
+        "orders": 324,
+        "items": 363,
+        "payments": 342,
+        "reviews": 321
+      },
+      "naive_gate_passed": false,
+      "preaggregated_gate_passed": true,
+      "naive_sql": {
+        "output_rows": 401,
+        "items_units": 5106892,
+        "payments_units": 7655905,
+        "distinct_payments_units": 5537996
+      },
+      "preaggregated_sql": {
+        "output_rows": 324,
+        "items_units": 4950766,
+        "payments_units": 5909048,
+        "distinct_payments_units": 5527770
+      },
+      "measures": [
+        {
+          "relation": "items",
+          "measure": "price",
+          "source_units": 4950766,
+          "output_units": 5106892,
+          "delta_units": 156126,
+          "absolute_exposure_units": 156126,
+          "affected_nonnull_rows": 15
+        },
+        {
+          "relation": "payments",
+          "measure": "payment_value",
+          "source_units": 5909048,
+          "output_units": 7655905,
+          "delta_units": 1746857,
+          "absolute_exposure_units": 1746857,
+          "affected_nonnull_rows": 35
+        }
+      ],
+      "naive_row_count_check_passed": false,
+      "naive_payment_total_check_passed": false,
+      "sum_distinct_payment_correct": false,
+      "sql_factorization_equal": true
+    },
+    {
+      "cohort": "2016-12",
+      "source_rows": {
+        "orders": 1,
+        "items": 1,
+        "payments": 1,
+        "reviews": 1
+      },
+      "naive_gate_passed": true,
+      "preaggregated_gate_passed": true,
+      "naive_sql": {
+        "output_rows": 1,
+        "items_units": 1090,
+        "payments_units": 1962,
+        "distinct_payments_units": 1962
+      },
+      "preaggregated_sql": {
+        "output_rows": 1,
+        "items_units": 1090,
+        "payments_units": 1962,
+        "distinct_payments_units": 1962
+      },
+      "measures": [
+        {
+          "relation": "items",
+          "measure": "price",
+          "source_units": 1090,
+          "output_units": 1090,
+          "delta_units": 0,
+          "absolute_exposure_units": 0,
+          "affected_nonnull_rows": 0
+        },
+        {
+          "relation": "payments",
+          "measure": "payment_value",
+          "source_units": 1962,
+          "output_units": 1962,
+          "delta_units": 0,
+          "absolute_exposure_units": 0,
+          "affected_nonnull_rows": 0
+        }
+      ],
+      "naive_row_count_check_passed": true,
+      "naive_payment_total_check_passed": true,
+      "sum_distinct_payment_correct": true,
+      "sql_factorization_equal": true
+    },
+    {
+      "cohort": "2017-01",
+      "source_rows": {
+        "orders": 800,
+        "items": 955,
+        "payments": 850,
+        "reviews": 797
+      },
+      "naive_gate_passed": false,
+      "preaggregated_gate_passed": true,
+      "naive_sql": {
+        "output_rows": 1035,
+        "items_units": 12989532,
+        "payments_units": 19080627,
+        "distinct_payments_units": 12262852
+      },
+      "preaggregated_sql": {
+        "output_rows": 800,
+        "items_units": 12031287,
+        "payments_units": 13848804,
+        "distinct_payments_units": 12231902
+      },
+      "measures": [
+        {
+          "relation": "items",
+          "measure": "price",
+          "source_units": 12031287,
+          "output_units": 12989532,
+          "delta_units": 958245,
+          "absolute_exposure_units": 958245,
+          "affected_nonnull_rows": 33
+        },
+        {
+          "relation": "payments",
+          "measure": "payment_value",
+          "source_units": 13848804,
+          "output_units": 19080627,
+          "delta_units": 5231823,
+          "absolute_exposure_units": 5231823,
+          "affected_nonnull_rows": 106
+        }
+      ],
+      "naive_row_count_check_passed": false,
+      "naive_payment_total_check_passed": false,
+      "sum_distinct_payment_correct": false,
+      "sql_factorization_equal": true
+    },
+    {
+      "cohort": "2017-02",
+      "source_rows": {
+        "orders": 1780,
+        "items": 1951,
+        "payments": 1886,
+        "reviews": 1776
+      },
+      "naive_gate_passed": false,
+      "preaggregated_gate_passed": true,
+      "naive_sql": {
+        "output_rows": 2123,
+        "items_units": 26201386,
+        "payments_units": 35184813,
+        "distinct_payments_units": 25284019
+      },
+      "preaggregated_sql": {
+        "output_rows": 1780,
+        "items_units": 24730302,
+        "payments_units": 29190801,
+        "distinct_payments_units": 25193065
+      },
+      "measures": [
+        {
+          "relation": "items",
+          "measure": "price",
+          "source_units": 24730302,
+          "output_units": 26201386,
+          "delta_units": 1471084,
+          "absolute_exposure_units": 1471084,
+          "affected_nonnull_rows": 84
+        },
+        {
+          "relation": "payments",
+          "measure": "payment_value",
+          "source_units": 29190801,
+          "output_units": 35184813,
+          "delta_units": 5994012,
+          "absolute_exposure_units": 5994012,
+          "affected_nonnull_rows": 175
+        }
+      ],
+      "naive_row_count_check_passed": false,
+      "naive_payment_total_check_passed": false,
+      "sum_distinct_payment_correct": false,
+      "sql_factorization_equal": true
+    },
+    {
+      "cohort": "2017-03",
+      "source_rows": {
+        "orders": 2682,
+        "items": 3000,
+        "payments": 2837,
+        "reviews": 2676
+      },
+      "naive_gate_passed": false,
+      "preaggregated_gate_passed": true,
+      "naive_sql": {
+        "output_rows": 3243,
+        "items_units": 39811744,
+        "payments_units": 54776984,
+        "distinct_payments_units": 37357648
+      },
+      "preaggregated_sql": {
+        "output_rows": 2682,
+        "items_units": 37434430,
+        "payments_units": 44986360,
+        "distinct_payments_units": 37134761
+      },
+      "measures": [
+        {
+          "relation": "items",
+          "measure": "price",
+          "source_units": 37434430,
+          "output_units": 39811744,
+          "delta_units": 2377314,
+          "absolute_exposure_units": 2377314,
+          "affected_nonnull_rows": 125
+        },
+        {
+          "relation": "payments",
+          "measure": "payment_value",
+          "source_units": 44986360,
+          "output_units": 54776984,
+          "delta_units": 9790624,
+          "absolute_exposure_units": 9790624,
+          "affected_nonnull_rows": 296
+        }
+      ],
+      "naive_row_count_check_passed": false,
+      "naive_payment_total_check_passed": false,
+      "sum_distinct_payment_correct": false,
+      "sql_factorization_equal": true
+    },
+    {
+      "cohort": "2017-04",
+      "source_rows": {
+        "orders": 2404,
+        "items": 2684,
+        "payments": 2571,
+        "reviews": 2394
+      },
+      "naive_gate_passed": false,
+      "preaggregated_gate_passed": true,
+      "naive_sql": {
+        "output_rows": 2878,
+        "items_units": 39259536,
+        "payments_units": 51212652,
+        "distinct_payments_units": 35287283
+      },
+      "preaggregated_sql": {
+        "output_rows": 2404,
+        "items_units": 35992723,
+        "payments_units": 41778803,
+        "distinct_payments_units": 35032678
+      },
+      "measures": [
+        {
+          "relation": "items",
+          "measure": "price",
+          "source_units": 35992723,
+          "output_units": 39259536,
+          "delta_units": 3266813,
+          "absolute_exposure_units": 3266813,
+          "affected_nonnull_rows": 107
+        },
+        {
+          "relation": "payments",
+          "measure": "payment_value",
+          "source_units": 41778803,
+          "output_units": 51212652,
+          "delta_units": 9433849,
+          "absolute_exposure_units": 9433849,
+          "affected_nonnull_rows": 238
+        }
+      ],
+      "naive_row_count_check_passed": false,
+      "naive_payment_total_check_passed": false,
+      "sum_distinct_payment_correct": false,
+      "sql_factorization_equal": true
+    },
+    {
+      "cohort": "2017-05",
+      "source_rows": {
+        "orders": 3700,
+        "items": 4136,
+        "payments": 3944,
+        "reviews": 3703
+      },
+      "naive_gate_passed": false,
+      "preaggregated_gate_passed": true,
+      "naive_sql": {
+        "output_rows": 4485,
+        "items_units": 54922684,
+        "payments_units": 73742531,
+        "distinct_payments_units": 48477393
+      },
+      "preaggregated_sql": {
+        "output_rows": 3700,
+        "items_units": 50607114,
+        "payments_units": 59291882,
+        "distinct_payments_units": 48450970
+      },
+      "measures": [
+        {
+          "relation": "items",
+          "measure": "price",
+          "source_units": 50607114,
+          "output_units": 54922684,
+          "delta_units": 4315570,
+          "absolute_exposure_units": 4315570,
+          "affected_nonnull_rows": 202
+        },
+        {
+          "relation": "payments",
+          "measure": "payment_value",
+          "source_units": 59291882,
+          "output_units": 73742531,
+          "delta_units": 14450649,
+          "absolute_exposure_units": 14450649,
+          "affected_nonnull_rows": 407
+        }
+      ],
+      "naive_row_count_check_passed": false,
+      "naive_payment_total_check_passed": false,
+      "sum_distinct_payment_correct": false,
+      "sql_factorization_equal": true
+    },
+    {
+      "cohort": "2017-06",
+      "source_rows": {
+        "orders": 3245,
+        "items": 3583,
+        "payments": 3436,
+        "reviews": 3250
+      },
+      "naive_gate_passed": false,
+      "preaggregated_gate_passed": true,
+      "naive_sql": {
+        "output_rows": 3853,
+        "items_units": 45686747,
+        "payments_units": 61377741,
+        "distinct_payments_units": 39551903
+      },
+      "preaggregated_sql": {
+        "output_rows": 3245,
+        "items_units": 43303860,
+        "payments_units": 51127638,
+        "distinct_payments_units": 39339216
+      },
+      "measures": [
+        {
+          "relation": "items",
+          "measure": "price",
+          "source_units": 43303860,
+          "output_units": 45686747,
+          "delta_units": 2382887,
+          "absolute_exposure_units": 2382887,
+          "affected_nonnull_rows": 157
+        },
+        {
+          "relation": "payments",
+          "measure": "payment_value",
+          "source_units": 51127638,
+          "output_units": 61377741,
+          "delta_units": 10250103,
+          "absolute_exposure_units": 10250103,
+          "affected_nonnull_rows": 320
+        }
+      ],
+      "naive_row_count_check_passed": false,
+      "naive_payment_total_check_passed": false,
+      "sum_distinct_payment_correct": false,
+      "sql_factorization_equal": true
+    },
+    {
+      "cohort": "2017-07",
+      "source_rows": {
+        "orders": 4026,
+        "items": 4519,
+        "payments": 4317,
+        "reviews": 4032
+      },
+      "naive_gate_passed": false,
+      "preaggregated_gate_passed": true,
+      "naive_sql": {
+        "output_rows": 4949,
+        "items_units": 53690696,
+        "payments_units": 74924284,
+        "distinct_payments_units": 43433758
+      },
+      "preaggregated_sql": {
+        "output_rows": 4026,
+        "items_units": 49803148,
+        "payments_units": 59238292,
+        "distinct_payments_units": 43344888
+      },
+      "measures": [
+        {
+          "relation": "items",
+          "measure": "price",
+          "source_units": 49803148,
+          "output_units": 53690696,
+          "delta_units": 3887548,
+          "absolute_exposure_units": 3887548,
+          "affected_nonnull_rows": 219
+        },
+        {
+          "relation": "payments",
+          "measure": "payment_value",
+          "source_units": 59238292,
+          "output_units": 74924284,
+          "delta_units": 15685992,
+          "absolute_exposure_units": 15685992,
+          "affected_nonnull_rows": 465
+        }
+      ],
+      "naive_row_count_check_passed": false,
+      "naive_payment_total_check_passed": false,
+      "sum_distinct_payment_correct": false,
+      "sql_factorization_equal": true
+    },
+    {
+      "cohort": "2017-08",
+      "source_rows": {
+        "orders": 4331,
+        "items": 4910,
+        "payments": 4550,
+        "reviews": 4341
+      },
+      "naive_gate_passed": false,
+      "preaggregated_gate_passed": true,
+      "naive_sql": {
+        "output_rows": 5278,
+        "items_units": 60602698,
+        "payments_units": 88416836,
+        "distinct_payments_units": 51029264
+      },
+      "preaggregated_sql": {
+        "output_rows": 4331,
+        "items_units": 57397168,
+        "payments_units": 67439632,
+        "distinct_payments_units": 50868811
+      },
+      "measures": [
+        {
+          "relation": "items",
+          "measure": "price",
+          "source_units": 57397168,
+          "output_units": 60602698,
+          "delta_units": 3205530,
+          "absolute_exposure_units": 3205530,
+          "affected_nonnull_rows": 208
+        },
+        {
+          "relation": "payments",
+          "measure": "payment_value",
+          "source_units": 67439632,
+          "output_units": 88416836,
+          "delta_units": 20977204,
+          "absolute_exposure_units": 20977204,
+          "affected_nonnull_rows": 502
+        }
+      ],
+      "naive_row_count_check_passed": false,
+      "naive_payment_total_check_passed": false,
+      "sum_distinct_payment_correct": false,
+      "sql_factorization_equal": true
+    },
+    {
+      "cohort": "2017-09",
+      "source_rows": {
+        "orders": 4285,
+        "items": 4831,
+        "payments": 4516,
+        "reviews": 4277
+      },
+      "naive_gate_passed": false,
+      "preaggregated_gate_passed": true,
+      "naive_sql": {
+        "output_rows": 5186,
+        "items_units": 66504738,
+        "payments_units": 103014197,
+        "distinct_payments_units": 56684723
+      },
+      "preaggregated_sql": {
+        "output_rows": 4285,
+        "items_units": 62440169,
+        "payments_units": 72776245,
+        "distinct_payments_units": 56412894
+      },
+      "measures": [
+        {
+          "relation": "items",
+          "measure": "price",
+          "source_units": 62440169,
+          "output_units": 66504738,
+          "delta_units": 4064569,
+          "absolute_exposure_units": 4064569,
+          "affected_nonnull_rows": 190
+        },
+        {
+          "relation": "payments",
+          "measure": "payment_value",
+          "source_units": 72776245,
+          "output_units": 103014197,
+          "delta_units": 30237952,
+          "absolute_exposure_units": 30237952,
+          "affected_nonnull_rows": 467
+        }
+      ],
+      "naive_row_count_check_passed": false,
+      "naive_payment_total_check_passed": false,
+      "sum_distinct_payment_correct": false,
+      "sql_factorization_equal": true
+    },
+    {
+      "cohort": "2017-10",
+      "source_rows": {
+        "orders": 4631,
+        "items": 5322,
+        "payments": 4860,
+        "reviews": 4626
+      },
+      "naive_gate_passed": false,
+      "preaggregated_gate_passed": true,
+      "naive_sql": {
+        "output_rows": 5683,
+        "items_units": 69745732,
+        "payments_units": 104608341,
+        "distinct_payments_units": 60032242
+      },
+      "preaggregated_sql": {
+        "output_rows": 4631,
+        "items_units": 66421943,
+        "payments_units": 77967788,
+        "distinct_payments_units": 59677789
+      },
+      "measures": [
+        {
+          "relation": "items",
+          "measure": "price",
+          "source_units": 66421943,
+          "output_units": 69745732,
+          "delta_units": 3323789,
+          "absolute_exposure_units": 3323789,
+          "affected_nonnull_rows": 234
+        },
+        {
+          "relation": "payments",
+          "measure": "payment_value",
+          "source_units": 77967788,
+          "output_units": 104608341,
+          "delta_units": 26640553,
+          "absolute_exposure_units": 26640553,
+          "affected_nonnull_rows": 540
+        }
+      ],
+      "naive_row_count_check_passed": false,
+      "naive_payment_total_check_passed": false,
+      "sum_distinct_payment_correct": false,
+      "sql_factorization_equal": true
+    },
+    {
+      "cohort": "2017-11",
+      "source_rows": {
+        "orders": 7544,
+        "items": 8665,
+        "payments": 7863,
+        "reviews": 7534
+      },
+      "naive_gate_passed": false,
+      "preaggregated_gate_passed": true,
+      "naive_sql": {
+        "output_rows": 9191,
+        "items_units": 105507210,
+        "payments_units": 161058121,
+        "distinct_payments_units": 86866362
+      },
+      "preaggregated_sql": {
+        "output_rows": 7544,
+        "items_units": 101027137,
+        "payments_units": 119488280,
+        "distinct_payments_units": 86183837
+      },
+      "measures": [
+        {
+          "relation": "items",
+          "measure": "price",
+          "source_units": 101027137,
+          "output_units": 105507210,
+          "delta_units": 4480073,
+          "absolute_exposure_units": 4480073,
+          "affected_nonnull_rows": 314
+        },
+        {
+          "relation": "payments",
+          "measure": "payment_value",
+          "source_units": 119488280,
+          "output_units": 161058121,
+          "delta_units": 41569841,
+          "absolute_exposure_units": 41569841,
+          "affected_nonnull_rows": 926
+        }
+      ],
+      "naive_row_count_check_passed": false,
+      "naive_payment_total_check_passed": false,
+      "sum_distinct_payment_correct": false,
+      "sql_factorization_equal": true
+    },
+    {
+      "cohort": "2017-12",
+      "source_rows": {
+        "orders": 5673,
+        "items": 6308,
+        "payments": 5895,
+        "reviews": 5638
+      },
+      "naive_gate_passed": false,
+      "preaggregated_gate_passed": true,
+      "naive_sql": {
+        "output_rows": 6645,
+        "items_units": 77357402,
+        "payments_units": 106094963,
+        "distinct_payments_units": 62727267
+      },
+      "preaggregated_sql": {
+        "output_rows": 5673,
+        "items_units": 74391417,
+        "payments_units": 87840148,
+        "distinct_payments_units": 62545883
+      },
+      "measures": [
+        {
+          "relation": "items",
+          "measure": "price",
+          "source_units": 74391417,
+          "output_units": 77357402,
+          "delta_units": 2965985,
+          "absolute_exposure_units": 2965985,
+          "affected_nonnull_rows": 204
+        },
+        {
+          "relation": "payments",
+          "measure": "payment_value",
+          "source_units": 87840148,
+          "output_units": 106094963,
+          "delta_units": 18254815,
+          "absolute_exposure_units": 18254815,
+          "affected_nonnull_rows": 550
+        }
+      ],
+      "naive_row_count_check_passed": false,
+      "naive_payment_total_check_passed": false,
+      "sum_distinct_payment_correct": false,
+      "sql_factorization_equal": true
+    },
+    {
+      "cohort": "2018-01",
+      "source_rows": {
+        "orders": 7269,
+        "items": 8208,
+        "payments": 7563,
+        "reviews": 7245
+      },
+      "naive_gate_passed": false,
+      "preaggregated_gate_passed": true,
+      "naive_sql": {
+        "output_rows": 8655,
+        "items_units": 99370149,
+        "payments_units": 142546140,
+        "distinct_payments_units": 78463936
+      },
+      "preaggregated_sql": {
+        "output_rows": 7269,
+        "items_units": 95003036,
+        "payments_units": 111500418,
+        "distinct_payments_units": 77961402
+      },
+      "measures": [
+        {
+          "relation": "items",
+          "measure": "price",
+          "source_units": 95003036,
+          "output_units": 99370149,
+          "delta_units": 4367113,
+          "absolute_exposure_units": 4367113,
+          "affected_nonnull_rows": 299
+        },
+        {
+          "relation": "payments",
+          "measure": "payment_value",
+          "source_units": 111500418,
+          "output_units": 142546140,
+          "delta_units": 31045722,
+          "absolute_exposure_units": 31045722,
+          "affected_nonnull_rows": 781
+        }
+      ],
+      "naive_row_count_check_passed": false,
+      "naive_payment_total_check_passed": false,
+      "sum_distinct_payment_correct": false,
+      "sql_factorization_equal": true
+    },
+    {
+      "cohort": "2018-02",
+      "source_rows": {
+        "orders": 6728,
+        "items": 7672,
+        "payments": 6952,
+        "reviews": 6758
+      },
+      "naive_gate_passed": false,
+      "preaggregated_gate_passed": true,
+      "naive_sql": {
+        "output_rows": 8057,
+        "items_units": 88951229,
+        "payments_units": 132733897,
+        "distinct_payments_units": 69875136
+      },
+      "preaggregated_sql": {
+        "output_rows": 6728,
+        "items_units": 84417871,
+        "payments_units": 99246334,
+        "distinct_payments_units": 69297467
+      },
+      "measures": [
+        {
+          "relation": "items",
+          "measure": "price",
+          "source_units": 84417871,
+          "output_units": 88951229,
+          "delta_units": 4533358,
+          "absolute_exposure_units": 4533358,
+          "affected_nonnull_rows": 272
+        },
+        {
+          "relation": "payments",
+          "measure": "payment_value",
+          "source_units": 99246334,
+          "output_units": 132733897,
+          "delta_units": 33487563,
+          "absolute_exposure_units": 33487563,
+          "affected_nonnull_rows": 765
+        }
+      ],
+      "naive_row_count_check_passed": false,
+      "naive_payment_total_check_passed": false,
+      "sum_distinct_payment_correct": false,
+      "sql_factorization_equal": true
+    },
+    {
+      "cohort": "2018-03",
+      "source_rows": {
+        "orders": 7211,
+        "items": 8217,
+        "payments": 7512,
+        "reviews": 7187
+      },
+      "naive_gate_passed": false,
+      "preaggregated_gate_passed": true,
+      "naive_sql": {
+        "output_rows": 8615,
+        "items_units": 102958967,
+        "payments_units": 148666964,
+        "distinct_payments_units": 88440872
+      },
+      "preaggregated_sql": {
+        "output_rows": 7211,
+        "items_units": 98321344,
+        "payments_units": 115965212,
+        "distinct_payments_units": 88160917
+      },
+      "measures": [
+        {
+          "relation": "items",
+          "measure": "price",
+          "source_units": 98321344,
+          "output_units": 102958967,
+          "delta_units": 4637623,
+          "absolute_exposure_units": 4637623,
+          "affected_nonnull_rows": 281
+        },
+        {
+          "relation": "payments",
+          "measure": "payment_value",
+          "source_units": 115965212,
+          "output_units": 148666964,
+          "delta_units": 32701752,
+          "absolute_exposure_units": 32701752,
+          "affected_nonnull_rows": 772
+        }
+      ],
+      "naive_row_count_check_passed": false,
+      "naive_payment_total_check_passed": false,
+      "sum_distinct_payment_correct": false,
+      "sql_factorization_equal": true
+    },
+    {
+      "cohort": "2018-04",
+      "source_rows": {
+        "orders": 6939,
+        "items": 7975,
+        "payments": 7209,
+        "reviews": 6894
+      },
+      "naive_gate_passed": false,
+      "preaggregated_gate_passed": true,
+      "naive_sql": {
+        "output_rows": 8277,
+        "items_units": 103171762,
+        "payments_units": 150037312,
+        "distinct_payments_units": 88202805
+      },
+      "preaggregated_sql": {
+        "output_rows": 6939,
+        "items_units": 99664775,
+        "payments_units": 116078548,
+        "distinct_payments_units": 87860108
+      },
+      "measures": [
+        {
+          "relation": "items",
+          "measure": "price",
+          "source_units": 99664775,
+          "output_units": 103171762,
+          "delta_units": 3506987,
+          "absolute_exposure_units": 3506987,
+          "affected_nonnull_rows": 200
+        },
+        {
+          "relation": "payments",
+          "measure": "payment_value",
+          "source_units": 116078548,
+          "output_units": 150037312,
+          "delta_units": 33958764,
+          "absolute_exposure_units": 33958764,
+          "affected_nonnull_rows": 728
+        }
+      ],
+      "naive_row_count_check_passed": false,
+      "naive_payment_total_check_passed": false,
+      "sum_distinct_payment_correct": false,
+      "sql_factorization_equal": true
+    },
+    {
+      "cohort": "2018-05",
+      "source_rows": {
+        "orders": 6873,
+        "items": 7925,
+        "payments": 7135,
+        "reviews": 6848
+      },
+      "naive_gate_passed": false,
+      "preaggregated_gate_passed": true,
+      "naive_sql": {
+        "output_rows": 8258,
+        "items_units": 103269942,
+        "payments_units": 151201075,
+        "distinct_payments_units": 89728741
+      },
+      "preaggregated_sql": {
+        "output_rows": 6873,
+        "items_units": 99651768,
+        "payments_units": 115398215,
+        "distinct_payments_units": 89657836
+      },
+      "measures": [
+        {
+          "relation": "items",
+          "measure": "price",
+          "source_units": 99651768,
+          "output_units": 103269942,
+          "delta_units": 3618174,
+          "absolute_exposure_units": 3618174,
+          "affected_nonnull_rows": 205
+        },
+        {
+          "relation": "payments",
+          "measure": "payment_value",
+          "source_units": 115398215,
+          "output_units": 151201075,
+          "delta_units": 35802860,
+          "absolute_exposure_units": 35802860,
+          "affected_nonnull_rows": 776
+        }
+      ],
+      "naive_row_count_check_passed": false,
+      "naive_payment_total_check_passed": false,
+      "sum_distinct_payment_correct": false,
+      "sql_factorization_equal": true
+    },
+    {
+      "cohort": "2018-06",
+      "source_rows": {
+        "orders": 6167,
+        "items": 7078,
+        "payments": 6419,
+        "reviews": 6147
+      },
+      "naive_gate_passed": false,
+      "preaggregated_gate_passed": true,
+      "naive_sql": {
+        "output_rows": 7403,
+        "items_units": 91005303,
+        "payments_units": 129968317,
+        "distinct_payments_units": 84806540
+      },
+      "preaggregated_sql": {
+        "output_rows": 6167,
+        "items_units": 86512431,
+        "payments_units": 102388050,
+        "distinct_payments_units": 84693123
+      },
+      "measures": [
+        {
+          "relation": "items",
+          "measure": "price",
+          "source_units": 86512431,
+          "output_units": 91005303,
+          "delta_units": 4492872,
+          "absolute_exposure_units": 4492872,
+          "affected_nonnull_rows": 214
+        },
+        {
+          "relation": "payments",
+          "measure": "payment_value",
+          "source_units": 102388050,
+          "output_units": 129968317,
+          "delta_units": 27580267,
+          "absolute_exposure_units": 27580267,
+          "affected_nonnull_rows": 690
+        }
+      ],
+      "naive_row_count_check_passed": false,
+      "naive_payment_total_check_passed": false,
+      "sum_distinct_payment_correct": false,
+      "sql_factorization_equal": true
+    },
+    {
+      "cohort": "2018-07",
+      "source_rows": {
+        "orders": 6292,
+        "items": 7092,
+        "payments": 6507,
+        "reviews": 6269
+      },
+      "naive_gate_passed": false,
+      "preaggregated_gate_passed": true,
+      "naive_sql": {
+        "output_rows": 7376,
+        "items_units": 92740138,
+        "payments_units": 136226708,
+        "distinct_payments_units": 84651373
+      },
+      "preaggregated_sql": {
+        "output_rows": 6292,
+        "items_units": 89550722,
+        "payments_units": 106654075,
+        "distinct_payments_units": 84342931
+      },
+      "measures": [
+        {
+          "relation": "items",
+          "measure": "price",
+          "source_units": 89550722,
+          "output_units": 92740138,
+          "delta_units": 3189416,
+          "absolute_exposure_units": 3189416,
+          "affected_nonnull_rows": 203
+        },
+        {
+          "relation": "payments",
+          "measure": "payment_value",
+          "source_units": 106654075,
+          "output_units": 136226708,
+          "delta_units": 29572633,
+          "absolute_exposure_units": 29572633,
+          "affected_nonnull_rows": 610
+        }
+      ],
+      "naive_row_count_check_passed": false,
+      "naive_payment_total_check_passed": false,
+      "sum_distinct_payment_correct": false,
+      "sql_factorization_equal": true
+    },
+    {
+      "cohort": "2018-08",
+      "source_rows": {
+        "orders": 6512,
+        "items": 7248,
+        "payments": 6698,
+        "reviews": 6487
+      },
+      "naive_gate_passed": false,
+      "preaggregated_gate_passed": true,
+      "naive_sql": {
+        "output_rows": 7524,
+        "items_units": 88473152,
+        "payments_units": 124894263,
+        "distinct_payments_units": 78294819
+      },
+      "preaggregated_sql": {
+        "output_rows": 6512,
+        "items_units": 85468633,
+        "payments_units": 102242532,
+        "distinct_payments_units": 78121482
+      },
+      "measures": [
+        {
+          "relation": "items",
+          "measure": "price",
+          "source_units": 85468633,
+          "output_units": 88473152,
+          "delta_units": 3004519,
+          "absolute_exposure_units": 3004519,
+          "affected_nonnull_rows": 158
+        },
+        {
+          "relation": "payments",
+          "measure": "payment_value",
+          "source_units": 102242532,
+          "output_units": 124894263,
+          "delta_units": 22651731,
+          "absolute_exposure_units": 22651731,
+          "affected_nonnull_rows": 598
+        }
+      ],
+      "naive_row_count_check_passed": false,
+      "naive_payment_total_check_passed": false,
+      "sum_distinct_payment_correct": false,
+      "sql_factorization_equal": true
+    },
+    {
+      "cohort": "2018-09",
+      "source_rows": {
+        "orders": 16,
+        "items": 1,
+        "payments": 16,
+        "reviews": 15
+      },
+      "naive_gate_passed": true,
+      "preaggregated_gate_passed": true,
+      "naive_sql": {
+        "output_rows": 16,
+        "items_units": 14500,
+        "payments_units": 443954,
+        "distinct_payments_units": 426033
+      },
+      "preaggregated_sql": {
+        "output_rows": 16,
+        "items_units": 14500,
+        "payments_units": 443954,
+        "distinct_payments_units": 426033
+      },
+      "measures": [
+        {
+          "relation": "items",
+          "measure": "price",
+          "source_units": 14500,
+          "output_units": 14500,
+          "delta_units": 0,
+          "absolute_exposure_units": 0,
+          "affected_nonnull_rows": 0
+        },
+        {
+          "relation": "payments",
+          "measure": "payment_value",
+          "source_units": 443954,
+          "output_units": 443954,
+          "delta_units": 0,
+          "absolute_exposure_units": 0,
+          "affected_nonnull_rows": 0
+        }
+      ],
+      "naive_row_count_check_passed": true,
+      "naive_payment_total_check_passed": true,
+      "sum_distinct_payment_correct": false,
+      "sql_factorization_equal": true
+    },
+    {
+      "cohort": "2018-10",
+      "source_rows": {
+        "orders": 4,
+        "items": 0,
+        "payments": 4,
+        "reviews": 4
+      },
+      "naive_gate_passed": true,
+      "preaggregated_gate_passed": true,
+      "naive_sql": {
+        "output_rows": 4,
+        "items_units": 0,
+        "payments_units": 58967,
+        "distinct_payments_units": 58967
+      },
+      "preaggregated_sql": {
+        "output_rows": 4,
+        "items_units": 0,
+        "payments_units": 58967,
+        "distinct_payments_units": 58967
+      },
+      "measures": [
+        {
+          "relation": "items",
+          "measure": "price",
+          "source_units": 0,
+          "output_units": 0,
+          "delta_units": 0,
+          "absolute_exposure_units": 0,
+          "affected_nonnull_rows": 0
+        },
+        {
+          "relation": "payments",
+          "measure": "payment_value",
+          "source_units": 58967,
+          "output_units": 58967,
+          "delta_units": 0,
+          "absolute_exposure_units": 0,
+          "affected_nonnull_rows": 0
+        }
+      ],
+      "naive_row_count_check_passed": true,
+      "naive_payment_total_check_passed": true,
+      "sum_distinct_payment_correct": true,
+      "sql_factorization_equal": true
+    }
+  ]
+}

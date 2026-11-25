@@ -1,0 +1,27 @@
+[build-system]
+requires = ["hatchling>=1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "join-proof-lab"
+version = "0.1.0"
+description = "Factorized evidence for declared analytical join contracts"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{name = "Zohaib Khalid"}]
+dependencies = []
+
+[project.optional-dependencies]
+study = ["duckdb==1.4.2"]
+dev = ["duckdb==1.4.2", "ruff>=0.9,<1"]
+
+[project.scripts]
+joinproof = "joinproof.cli:main"
+joinproof-recover = "joinproof.recover:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/joinproof"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"

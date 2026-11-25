@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "license": "MIT",
+  "cases": [
+    {
+      "fixture": "cancellation",
+      "synthetic": true,
+      "source_rows": 2,
+      "output_rows": 2,
+      "source_units": 20000,
+      "output_units": 20000,
+      "exposure_units": 20000,
+      "gate_passed": false,
+      "sql_copies": [
+        {
+          "order_id": "A",
+          "copies": 2
+        },
+        {
+          "order_id": "B",
+          "copies": 0
+        }
+      ]
+    },
+    {
+      "fixture": "signed-cancellation",
+      "synthetic": true,
+      "source_rows": 4,
+      "output_rows": 4,
+      "source_units": 0,
+      "output_units": 0,
+      "exposure_units": 30000,
+      "gate_passed": false,
+      "sql_copies": [
+        {
+          "order_id": "A",
+          "copies": 2
+        },
+        {
+          "order_id": "B",
+          "copies": 2
+        },
+        {
+          "order_id": "C",
+          "copies": 0
+        },
+        {
+          "order_id": "D",
+          "copies": 0
+        }
+      ]
+    }
+  ]
+}
